@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClienteComponent } from './cliente/cliente.component';
-import { ClientesComponent } from './clientes/clientes.component';
+import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
+import { ListClientesComponent } from './cliente/list-clientes/list-clientes.component';
+import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
+import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClienteComponent,
-    ClientesComponent
+    ShowClienteComponent,
+    ListClientesComponent,
+    EditClienteComponent,
+    NewClienteComponent,
   ],
   imports: [
     BrowserModule,
