@@ -12,5 +12,5 @@ export const CLIENTES: Cliente[] = [
     {id: 1, nome:'Gustavo Maciel', rg:'1234567',
     tipoCadastroPessoa:true, cadastroPessoa:'123456890', telefone: '83999999999', 
     email:'gustavo.maciel@dce.ufpb.br', profissao: 'Estudante', 
-    endereco: new Endereco('','','',''), tipoCliente:'Locador'}
+    endereco: new Endereco('rua','bairro','numero','cep'), tipoCliente:'Locador'}
 ]
