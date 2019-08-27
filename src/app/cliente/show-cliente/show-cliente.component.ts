@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators'; 
 import { Cliente } from '../cliente';
-import {Endereco} from '../endereco';
 import { ClienteService } from '../cliente.service';
 
 @Component({
