@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Cliente } from './cliente';
 import { AppService } from 'src/app/app.service';
+import { Endereco } from './endereco';
 
 @Injectable()
 export class ClienteService{
@@ -8,7 +9,8 @@ export class ClienteService{
 
     clientes: Cliente[] = [];
 
-    constructor(private appService: AppService){}
+    constructor(private appService: AppService){
+    }
 
     //Simular POST em /clientes
     add(cliente: Cliente): Cliente{
