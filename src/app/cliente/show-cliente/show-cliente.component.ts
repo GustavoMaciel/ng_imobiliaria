@@ -20,16 +20,6 @@ export class ShowClienteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.clienteService.add(new Cliente(
-      'Gustavo Maciel', "1234567", true,
-      "1234567890", "83999999999", 
-      "gustavo.maciel@dcx.ufpb.com", "Estudante", 
-      new Endereco(
-          "rua", "centro", "1234", "12345678"
-      ), "Executivo"
-  ));
-
-
     this.route.paramMap.pipe(
     switchMap(
       (params: ParamMap) => this.loadCliente(+params.get('id'))

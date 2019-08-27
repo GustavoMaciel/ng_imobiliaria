@@ -12,9 +12,6 @@ export class AppComponent {
 
   title = 'imobiliaria';
 
-  constructor (service: AppService){
-    service.messageChanged$.subscribe(
-      (message) => this.message = message
-    );
+  constructor (){
   }
 }

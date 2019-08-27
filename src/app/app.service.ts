@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AppService {
 
   private messageChangedSource = new Subject<string>();
   public messageChanged$ = this.messageChangedSource.asObservable();
 
-  constructor() {}
+
+  constructor() { }
 
   changeMessage(message: string) {
     this.messageChangedSource.next(message);
@@ -16,4 +19,5 @@ export class AppService {
   clearMessage() {
     this.messageChangedSource.next(null);
   }
+
 }

@@ -1,13 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Cliente } from './cliente';
 import { AppService } from 'src/app/app.service';
-import { Endereco } from './endereco';
+import { CLIENTES } from './mock-clientes';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class ClienteService{
     lastId = 0;
 
-    clientes: Cliente[] = [];
+    clientes: Cliente[] = CLIENTES;
 
     constructor(private appService: AppService){
     }
