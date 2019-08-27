@@ -5,8 +5,8 @@ import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.compon
 import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
 
 export const routes: Routes = [
-  { path: 'books', component: ListClientesComponent },
-  { path: 'books/new', component: NewClienteComponent },
-  { path: 'books/:id', component: ShowClienteComponent },
-  { path: 'books/:id/edit', component: EditClienteComponent }
+  { path: 'clientes', component: ListClientesComponent },
+  { path: 'clientes/novo', component: NewClienteComponent },
+  { path: 'clientes/:id', component: ShowClienteComponent },
+  { path: 'clientes/:id/editar', component: EditClienteComponent }
 ];
