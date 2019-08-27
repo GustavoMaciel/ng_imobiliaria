@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
-import { ListClientesComponent } from './cliente/list-clientes/list-clientes.component';
-import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
-import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component';
+import { ShowClienteComponent } from './components/cliente/show-cliente/show-cliente.component';
+import { ListClientesComponent } from './components/cliente/list-clientes/list-clientes.component';
+import { EditClienteComponent } from './components/cliente/edit-cliente/edit-cliente.component';
+import { NewClienteComponent } from './components/cliente/new-cliente/new-cliente.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavComponent } from './components/nav/nav.component';
-import { ClienteComponent } from './cliente/cliente/cliente.component';
+import { ClienteComponent } from './components/cliente/cliente/cliente.component';
 
 @NgModule({
   declarations: [
