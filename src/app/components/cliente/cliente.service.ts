@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Cliente } from './cliente';
 import { AppService } from 'src/app/app.service';
-import { CLIENTES } from './mock-clientes';
+import { LOCADORES } from './mock-clientes';
+import { LOCATARIOS } from './mock-clientes';
 
 @Injectable({
     providedIn: 'root'
@@ -9,9 +10,16 @@ import { CLIENTES } from './mock-clientes';
 export class ClienteService{
     lastId = 0;
 
-    clientes: Cliente[] = CLIENTES;
+    clientes: Cliente[] = [];
+
 
     constructor(private appService: AppService){
+        for(let cli of LOCADORES){
+            this.clientes.push(cli)
+        }
+        for(let cli of LOCATARIOS){
+            this.clientes.push(cli)
+        }
     }
 
     //Simular POST em /clientes
