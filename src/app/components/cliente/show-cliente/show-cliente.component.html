@@ -13,10 +13,13 @@
                 <strong>RG:</strong>
                 {{cliente.rg}}
               </p>
-              <p>
-                <strong *ngIf="cliente.tipoCadastroPessoa">CPF:</strong>
-                <strong *ngElse>CNPJ:</strong>
-                {{cliente.cadastroPessoa}}
+              <p *ngIf="cliente.tipoCliente === 'Locatario'">
+                <strong>CPF:</strong>
+                {{cliente.cpf}}
+              </p>
+              <p *ngIf="cliente.tipoCliente === 'Locador'">
+                <strong>CNPJ:</strong>
+                {{cliente.cnpj}}
               </p>
               <p>
                 <strong>Telefone:</strong>
