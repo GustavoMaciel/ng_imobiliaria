@@ -1,3 +1,9 @@
+#cadastro {
+    margin-top: 2%;
+    border: 1px solid #bcbcbc;
+    border-radius: 30px;
+    padding: 5px;
+}
 .row {
     margin-left: 2.1%;
     margin-right: 2.1%;
@@ -11,21 +17,43 @@
 }
 
 #diretorio h3 a {
-    color: black;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
     text-decoration: none;
+    text-decoration: underline;
+    color: #bcbcbc;
 }
 
 form {
     width: 100%;
 }
 
-.form-control {
-    border-radius: 10px;
+label {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #bcbcbc;
 }
 
-.input-group .form-control {
-    border-radius: 10px;
+.form-control {
+    width: 90%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #bcbcbc;
 }
+
+
 .input-group .input-group-text {
     background-color: white;
     border: none;
@@ -33,9 +61,29 @@ form {
 
 .btn-group {
     float: right;
+    border: 1px solid black;
+    border-radius: 30px;
 }
 
-.btn-group .btn {
-    border: 1px solid black;
-    border-radius: 0;
+.btn-group .btn-l {
+    border-right: 1px solid black;
 }
+
+.btn-group .btn-r {
+    border-left: 1px solid black;
+}
+.btn-group .btn:hover {
+    background-color: #bcbcbc;
+}
+
+.btn-group .btn-l:hover {
+    background-color: #bcbcbc;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.btn-group .btn-r:hover {
+    background-color: #bcbcbc;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+} 
