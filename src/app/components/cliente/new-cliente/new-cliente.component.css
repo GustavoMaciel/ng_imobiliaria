@@ -48,10 +48,12 @@ label {
 
 .form-control {
     width: 90%;
+    height: 50px;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #bcbcbc;
 }
+
 
 
 .input-group .input-group-text {

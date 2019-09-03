@@ -43,6 +43,10 @@ label {
     color: #bcbcbc;
 }
 
+h5 {
+    width: 90%;
+}
+
 form {
     width: 100%;
 }
