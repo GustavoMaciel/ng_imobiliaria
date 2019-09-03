@@ -46,8 +46,7 @@
             </tr>
         </thead>
         <tbody class="overflow-auto scrollable-menu">
-            <!--<tr id="showPanel" *ngIf="cliente">-->
-            <tr>
+            <tr  *ngFor="let cliente of clientes">
                 <th scope="row">{{cliente.nome}}</th>
                 <td>{{cliente.tipoCliente}}</td>
                 <td>{{cliente.tipoCliente}}</td>
