@@ -46,35 +46,10 @@
             </tr>
         </thead>
         <tbody class="overflow-auto scrollable-menu">
-            <tr>
-                <th scope="row">Nome</th>
-                <td>1</td>
-                <td>ativo</td>
-            </tr>
-            <tr>
-                <th scope="row">Nome</th>
-                <td>1</td>
-                <td>ativo</td>
-            </tr>
-            <tr>
-                <th scope="row">Nome</th>
-                <td>1</td>
-                <td>ativo</td>
-            </tr>
-            <tr>
-                <th scope="row">Nome</th>
-                <td>1</td>
-                <td>ativo</td>
-            </tr>
-            <tr>
-                <th scope="row">Nome</th>
-                <td>1</td>
-                <td>ativo</td>
-            </tr>
-            <tr>
-                <th scope="row">Nome</th>
-                <td>1</td>
-                <td>ativo</td>
+            <tr id="showPanel" *ngIf="cliente">
+                <th scope="row">{{cliente.nome}}</th>
+                <td>{{cliente.tipoCliente}}</td>
+                <td>{{cliente.tipoCliente}}</td>
             </tr>
         </tbody>
     </table>
