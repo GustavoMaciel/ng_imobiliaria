@@ -27,7 +27,6 @@ export class ListClientesComponent implements OnInit {
 
   delete(id:number) {
     this.clienteService.delete(id);
-    /*this.ngOnInit()*/
     return false;
   }
 
