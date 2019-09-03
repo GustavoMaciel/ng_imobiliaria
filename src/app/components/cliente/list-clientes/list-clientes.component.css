@@ -52,7 +52,7 @@
    
 }
 table {
-    border: 2px solid #b4b4b4;
+    box-shadow: 0 8px 6px 0 #b4b4b4;
     padding: 0;
 }
 
@@ -63,6 +63,33 @@ thead {
 
 thead tr {
     color: white;
+}
+
+tbody th, td {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: normal;
+
+}
+
+tbody td a {
+    width: 100px;
+    padding: 0;
+    background-color: #b4b4b4;
+    border-radius: 30px;
+    margin-right: 2%;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #ffffff;
 }
 
 /* for custom scrollbar for webkit browser*/

@@ -6,15 +6,6 @@
                     <a class="nav-link" [routerLink]="['new']" (click)="url('new')">Adicionar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ver</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Editar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Remover</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#">Imóveis</a>
                 </li>
                 <li class="nav-item">
@@ -43,13 +34,19 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Tipo de cliente</th>
                 <th scope="col">Status</th>
+                <th scope="col">OP</th>
             </tr>
         </thead>
         <tbody class="overflow-auto scrollable-menu">
-           <tr *ngFor="let cliente of clientes">
+            <tr *ngFor="let cliente of clientes">
                 <th scope="row">{{cliente.nome}}</th>
                 <td>{{cliente.tipoCliente}}</td>
-                <td>Ativo</td>
+                <td>ativo</td>
+                <td class="text-center">
+                    <a class="btn">Ver</a>
+                    <a class="btn">Editar</a>
+                    <a class="btn" href="#" (click)="delete(cliente.id)">Remover</a>
+                </td>
             </tr>
         </tbody>
     </table>
