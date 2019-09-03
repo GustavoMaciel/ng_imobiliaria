@@ -1,15 +1,44 @@
 .navbar {
-    background-color: #f1f1f1;
-    border-bottom: 1px solid black;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+   
 }
+
 .navbar {
     padding-right: 3%;
     padding-left: 3%;
 }
+
+.navbar a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    text-align: left;
+    color: #b4b4b4;
+}
 .navbar .nav-item i {
     font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    text-align: left;
+    color: #b4b4b4;
+    
 }
 
 .navbar .nav-item h5 {
     font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    text-align: left;
+    color: #b4b4b4;
 }

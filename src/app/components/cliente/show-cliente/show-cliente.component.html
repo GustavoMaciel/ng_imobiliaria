@@ -4,91 +4,92 @@
 <p *ngIf="cliente.tipoCliente === 'Locador'">
 <a href="#" (click)="edit()">Edit</a> | <a href="#" (click)="back()">Back</a>
 -->
+<div id="cadastro">
+  <div class="row" id="diretorio">
+    <h3><a href="#">Inicio</a></h3>
+    <h3><a href="#">Clientes</a></h3>
+    <h3><a href="#">Novo</a></h3>
+  </div>
 
-<div class="row" id="diretorio">
-  <h3><a href="#">Inicio</a></h3>
-  <h3><a href="#">Clientes</a></h3>
-  <h3><a href="#">Novo</a></h3>
-</div>
-
-<div class="row">
-  <form>
-    <div class="form-row mb-3">
-      <div class="col-md-8">
-        <label for="inputEmail4">Nome Completo</label>
-        <h5 class="dado">{{cliente.nome}}</h5>>
+  <div class="row">
+    <form>
+      <div class="form-row mb-3">
+        <div class="col-md-8">
+          <label for="inputEmail4">Nome Completo</label>
+          <h5 class="dado">{{cliente.nome}}</h5>>
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail4">CPF</label>
+          <h5 class="dado">{{cliente.cpf}}</h5>
+        </div>
       </div>
-      <div class="col-md-4">
-        <label for="inputEmail4">CPF</label>
-        <h5 class="dado">{{cliente.cpf}}</h5>
-      </div>
-    </div>
 
-    <div class="form-row mb-5">
-      <div class="col-md-4">
-        <label for="inputEmail4">Data</label>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder=" / / " aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2"><i class="fas fa-calendar-alt"></i></span>
+      <div class="form-row mb-5">
+        <div class="col-md-4">
+          <label for="inputEmail4">Data</label>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder=" / / " aria-label="Recipient's username"
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2"><i class="fas fa-calendar-alt"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail4">Profissão</label>
+          <h5 class="dado">{{cliente.profissao}}</h5>
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail4">RG</label>
+          <h5 class="dado">{{cliente.rg}}</h5>
+        </div>
+      </div>
+
+      <div class="form-group mb-3" id="endereco">
+        <label for="exampleInputEmail1">Endereço</label>
+        <div class="row ml-n3">
+          <div class="col-md-3">
+            <label class="mr-1">Rua:</label>
+            <h5 class="mr-1 dado">{{cliente.endereco.rua}}</h5>
+
+          </div>
+          <div class="col-md-3">
+            <label class="mr-1"> Bairro:</label>
+            <h5 class="mr-1 dado">{{cliente.endereco.bairro}}</h5>
+          </div>
+          <div class="col-md-3">
+            <label class="mr-1">Numero:</label>
+            <h5 class="mr-1 dado">{{cliente.endereco.numero}}</h5>
+          </div>
+          <div class="col-md-3">
+            <label class="mr-1">CPE:</label>
+            <h5 class="mr-1 dado">{{cliente.endereco.cep}}</h5>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <label for="inputEmail4">Profissão</label>
-        <h5 class="dado">{{cliente.profissao}}</h5>
-      </div>
-      <div class="col-md-4">
-        <label for="inputEmail4">RG</label>
-        <h5 class="dado">{{cliente.rg}}</h5>
-      </div>
-    </div>
 
-    <div class="form-group mb-3" id="endereco">
-      <label for="exampleInputEmail1">Endereço</label>
-      <div class="row ml-n3">
-        <div class="col-md-3">
-          <h5 class="mr-1">Rua:</h5>
-          <h5 class="mr-1 dado">{{cliente.endereco.rua}}</h5>
-
+      <div class="form-row mb-3">
+        <div class="col-md-6">
+          <label for="inputEmail4">Email</label>
+          <h5 class="dado">{{cliente.email}}</h5>
         </div>
-        <div class="col-md-3">
-          <h5 class="mr-1"> Bairro:</h5>
-          <h5 class="mr-1 dado">{{cliente.endereco.bairro}}</h5>
-        </div>
-        <div class="col-md-3">
-          <h5 class="mr-1">Numero:</h5>
-          <h5 class="mr-1 dado">{{cliente.endereco.numero}}</h5>
-        </div>
-        <div class="col-md-3">
-          <h5 class="mr-1">CPE:</h5>
-          <h5 class="mr-1 dado">{{cliente.endereco.cep}}</h5>
+        <div class="col-md-6">
+          <label for="inputEmail4">Telefone</label>
+          <h5 class="dado">{{cliente.telefone}}</h5>
         </div>
       </div>
-    </div>
 
-    <div class="form-row mb-3">
-      <div class="col-md-6">
-        <label for="inputEmail4">Email</label>
-        <h5 class="dado">{{cliente.email}}</h5>
+      <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+        <label class="btn">
+          <input type="radio" name="options" id="option1" autocomplete="off">Criar Contato
+        </label>
+        <label class="btn">
+          <input type="radio" name="options" id="option2" autocomplete="off">Adicionar Imovel
+        </label>
+        <label class="btn">
+          <input type="radio" name="options" id="option3" autocomplete="off">Salvar
+        </label>
       </div>
-      <div class="col-md-6">
-        <label for="inputEmail4">Telefone</label>
-        <h5 class="dado">{{cliente.telefone}}</h5>
-      </div>
-    </div>
-
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-      <label class="btn">
-        <input type="radio" name="options" id="option1" autocomplete="off">Criar Contato
-      </label>
-      <label class="btn">
-        <input type="radio" name="options" id="option2" autocomplete="off">Adicionar Imovel
-      </label>
-      <label class="btn">
-        <input type="radio" name="options" id="option3" autocomplete="off">Salvar
-      </label>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>

@@ -1,16 +1,39 @@
 .navbar {
-    margin-left: 1%;
+    width: 95.2%;
     margin-top: 1%;
+    margin-left: 2.2%;
+    padding-top: 2%;
+    box-shadow: 0 8px 6px 0 #b4b4b4;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .navbar ul li {
     width: 100px;
     padding: 0;
-    border: 1px solid black;
-    text-align: center;
-    font-weight: 500;
-    color: black;
+    background-color: #b4b4b4;
+    border-radius: 30px;
+    margin-right: 2%;
+    
 }
+
+.navbar ul li a {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.navbar ul li a:focus:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    padding: 0;
+}
+
 .row {
     width: 100%;
 }
@@ -30,14 +53,17 @@
    
 }
 table {
-    height: 30vw;
-    border: 2px solid black;
+    border: 2px solid #b4b4b4;
     padding: 0;
 }
 
 thead {
-    background-color: gray;
+    background-color: #b4b4b4;
     padding: 0;
+}
+
+thead tr {
+    color: white;
 }
 
 /* for custom scrollbar for webkit browser*/
