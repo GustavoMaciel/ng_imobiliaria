@@ -10,39 +10,20 @@ import { ClienteService } from '../cliente.service';
   styleUrls: ['./list-clientes.component.css']
 })
 export class ListClientesComponent implements OnInit {
-  public cliente: Cliente;
+  public clientes: Cliente [];
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private clienteService: ClienteService
   ) { }
+  
   ngOnInit() {
-    this.route.paramMap.pipe(
-      switchMap(
-        (params: ParamMap) => this.loadCliente(+params.get('id'))
-      ))
-      .subscribe(
-        (cliente: Cliente) => this.cliente = cliente
-      );
+    this.clientes = this.loadClientes();
   }
 
-  loadCliente(idCliente: number): Promise<Cliente> {
-    return new Promise(
-      (resolve) => resolve(this.clienteService.getById(idCliente))
-    )
-  }
-
-  back() {
-    this.router.navigate(['/clientes']);
-    this.clienteService.clearMessage();
-    return false;
-  }
-
-  edit() {
-    this.clienteService.clearMessage();
-    this.router.navigate(['/clientes', this.cliente.id, 'editar']);
-    return false;
+  loadClientes(): Cliente[] {
+    return this.clienteService.list();
   }
 
 }
