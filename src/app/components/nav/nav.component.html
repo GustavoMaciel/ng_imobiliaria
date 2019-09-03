@@ -1,6 +1,6 @@
 <nav class="nav">
-    <a class="nav-link" href="#">INÍCIO</a>
-    <a class="nav-link" href="#">CLIENTES</a>
-    <a class="nav-link" href="#">IMÓVEIS</a>
-    <a class="nav-link" href="#">CONTRATOS</a>
+    <a class="nav-link" [routerLink]="['inicio']" (click)="url('inicio')">INÍCIO</a>
+    <a class="nav-link" [routerLink]="['clientes']" (click)="url('clientes')">CLIENTES</a>
+    <a class="nav-link" [routerLink]="['imoveis']" (click)="url('imoveis')">IMÓVEIS</a>
+    <a class="nav-link" [routerLink]="['contratos']" (click)="url('contratos')">CONTRATOS</a>
 </nav>
