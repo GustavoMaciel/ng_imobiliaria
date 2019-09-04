@@ -10,20 +10,24 @@ import { ClienteService } from '../cliente.service';
   styleUrls: ['./list-clientes.component.css']
 })
 export class ListClientesComponent implements OnInit {
-  public clientes: Cliente [];
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private clienteService: ClienteService
+   
   ) { }
   
   ngOnInit() {
-    this.clientes = this.loadClientes();
   }
 
-  loadClientes(): Cliente[] {
+  get clientes(): Cliente []{
     return this.clienteService.list();
+  }
+
+  delete(id:number) {
+    this.clienteService.delete(id);
+    return false;
   }
 
 }
