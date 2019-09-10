@@ -6,6 +6,7 @@ export class Cliente {
     constructor(
         public nome: string,
         public rg: string,
+        public orgaoEx: string,
         public telefone: string,
         public email: string,
         public profissao: string,

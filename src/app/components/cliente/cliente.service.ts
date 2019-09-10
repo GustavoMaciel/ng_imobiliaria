@@ -16,9 +16,11 @@ export class ClienteService{
     constructor(private appService: AppService){
         for(let cli of LOCADORES){
             this.clientes.push(cli)
+            this.lastId++;
         }
         for(let cli of LOCATARIOS){
             this.clientes.push(cli)
+            this.lastId++;
         }
     }
 
