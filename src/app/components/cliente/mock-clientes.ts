@@ -11,13 +11,13 @@ import { Locatario } from './locatario';
       ), "Executivo"
 */
 export const LOCADORES: Locador[] = [
-    {id: 1, nome:'John Doe', rg:'1234567', cnpj: '05.526.392/0001-40', telefone: '83999999999', 
+    {id: 1, nome:'John Doe', rg:'1234567', orgaoEx:'SSP/RR', cnpj: '05.526.392/0001-40', telefone: '83999999999', 
     email:'john.doe@gmail.com', profissao: 'CEO', 
     endereco: new Endereco('rua','bairro','numero','cep'), tipoCliente:'Locador'}
 ]
 
 export const LOCATARIOS: Locatario[] = [
-    {id: 2, nome:'Gustavo Maciel', rg:'1234567', cpf: '123.321.123-32', telefone: '83999999999', 
+    {id: 2, nome:'Gustavo Maciel', rg:'1234567', orgaoEx:'SSP/RO', cpf: '123.321.123-32', telefone: '83999999999', 
     email:'gustavo.maciel@dce.ufpb.br', profissao: 'Estudante', 
     endereco: new Endereco('rua','bairro','numero','cep'), tipoCliente:'Locatario'}
 ]
