@@ -5,6 +5,7 @@ export class Locatario extends Cliente {
     constructor(
         nome: string,
         rg: string,
+        orgaoEx: string,
         public cpf: string,
         telefone: string,
         email: string,
@@ -12,6 +13,6 @@ export class Locatario extends Cliente {
         endereco: Endereco,
         tipoCliente: string,
     ){
-        super(nome, rg, telefone, email, profissao, endereco, tipoCliente)
+        super(nome, rg, orgaoEx, telefone, email, profissao, endereco, tipoCliente)
     }
 }

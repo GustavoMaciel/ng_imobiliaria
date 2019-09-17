@@ -6,67 +6,150 @@
     </div>
 
     <div class="row">
-        <form>
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
             <div class="form-row mb-3">
                 <div class="col-md-8">
                     <label for="inputEmail4">Nome Completo</label>
-                    <input type="text" class="form-control" placeholder="">
-                </div>
-                <div class="col-md-4">
-                    <label for="inputEmail4">CPF</label>
-                    <input type="text" class="form-control" placeholder="">
-                </div>
-            </div>
-
-            <div class="form-row mb-5">
-                <div class="col-md-4">
-                    <label for="inputEmail4">Data</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder=" / / " aria-label="Recipient's username"
-                            aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2"><i class="fas fa-calendar-alt"></i></span>
-                        </div>
+                    <input formControlName="nome" type="text" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.nome.errors }">
+                    <div *ngIf="submitted && form.nome.errors" class="invalid-feedback">
+                        <div *ngIf="form.nome.errors.required">O campo nome é obrigatório</div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="inputEmail4">Profissão</label>
-                    <input type="text" class="form-control" placeholder="">
-                </div>
-                <div class="col-md-4">
-                    <label for="inputEmail4">RG</label>
-                    <input type="text" class="form-control" placeholder="">
+                    <label for="inputEmail4">Tipo</label><br>
+                    <select name="tipoClienteSel" id="tipoClienteSel" formControlName="tipoCliente">
+                        <option value="Locatário" selected>Locatário</option>
+                        <option value="Locador">Locador</option>
+                    </select>
                 </div>
             </div>
 
-            <div class="form-group mb-3">
-                <label for="exampleInputEmail1">Endereço</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="">
+            <div class="form-row mb-3">
+                <div *ngIf="form.tipoCliente.value === 'Locatário'; else tipoCadastroPessoa" class="col-md-6">
+                    <label for="inputEmail4">CPF</label>
+                    <input formControlName="cpf" type="text" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.cpf.errors }">
+                    <div *ngIf="submitted && form.cpf.errors" class="invalid-feedback">
+                        <div *ngIf="form.cpf.errors.required">O campo CPF é obrigatório</div>
+                    </div>
+                </div>
+
+                <ng-template #tipoCadastroPessoa>
+                    <div class="col-md-6">
+                        <label for="inputEmail4">CNPJ</label>
+                        <input formControlName="cnpj" type="text" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && form.cnpj.errors }">
+                        <div *ngIf="submitted && form.cnpj.errors" class="invalid-feedback">
+                            <div *ngIf="form.cnpj.errors.required">O campo CNPJ é obrigatório</div>
+                        </div>
+                    </div>
+                </ng-template>
+
+                <div class="col-md-6">
+                    <label for="inputEmail4">RG</label>
+                    <input formControlName="rg" type="text" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.rg.errors }">
+                    <div *ngIf="submitted && form.rg.errors" class="invalid-feedback">
+                        <div *ngIf="form.rg.errors.required">O campo RG é obrigatório</div>
+                    </div>
+                </div>
             </div>
+
+            <div class="form-row mb-3">
+                <div class="col-md-6">
+                    <label for="inputEmail4">Orgão Expeditor</label>
+                    <input formControlName="orgaoEx" type="text" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.orgaoEx.errors }">
+                    <div *ngIf="submitted && form.orgaoEx.errors" class="invalid-feedback">
+                        <div *ngIf="form.orgaoEx.errors.required">O campo orgão expeditor é obrigatório</div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="form-row mb-3">
                 <div class="col-md-6">
                     <label for="inputEmail4">Email</label>
-                    <input type="text" class="form-control" placeholder="">
+                    <input formControlName="email" type="text" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.email.errors }">
+                    <div *ngIf="submitted && form.email.errors" class="invalid-feedback">
+                        <div *ngIf="form.email.errors.required">O campo email é obrigatório</div>
+                    </div>
                 </div>
+
                 <div class="col-md-6">
                     <label for="inputEmail4">Telefone</label>
-                    <input type="text" class="form-control" placeholder="">
+                    <input formControlName="telefone" type="text" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.telefone.errors }">
+                    <div *ngIf="submitted && form.telefone.errors" class="invalid-feedback">
+                        <div *ngIf="form.telefone.errors.required">O campo telefone é obrigatório</div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="form-row mb-3">
+                <div class="col-md-4">
+                    <label for="inputEmail4">Profissão</label>
+                    <input formControlName="profissao" type="text" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.profissao.errors }">
+                    <div *ngIf="submitted && form.profissao.errors" class="invalid-feedback">
+                        <div *ngIf="form.profissao.errors.required">O campo profissão é obrigatório</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row mb-3">
+                <div class="form-group col-9">
+                    <label for="exampleInputEmail1">Rua</label>
+                    <input formControlName="rua" type="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" [ngClass]="{ 'is-invalid': submitted && form.rua.errors }">
+                    <div *ngIf="submitted && form.rua.errors" class="invalid-feedback">
+                        <div *ngIf="form.rua.errors.required">O campo rua é obrigatório</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-3">
+                    <label for="exampleInputEmail1">Número</label>
+                    <input formControlName="numero" type="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" [ngClass]="{ 'is-invalid': submitted && form.numero.errors }">
+                    <div *ngIf="submitted && form.numero.errors" class="invalid-feedback">
+                        <div *ngIf="form.numero.errors.required">O campo número é obrigatório</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="exampleInputEmail1">Bairro</label>
+                    <input formControlName="bairro" type="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" [ngClass]="{ 'is-invalid': submitted && form.bairro.errors }">
+                    <div *ngIf="submitted && form.bairro.errors" class="invalid-feedback">
+                        <div *ngIf="form.bairro.errors.required">O campo bairro é obrigatório</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="exampleInputEmail1">CEP</label>
+                    <input formControlName="cep" type="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" [ngClass]="{ 'is-invalid': submitted && form.cep.errors }">
+                    <div *ngIf="submitted && form.cep.errors" class="invalid-feedback">
+                        <div *ngIf="form.cep.errors.required">O campo CEP é obrigatório</div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
                 <label class="btn btn-l">
-                    <input type="radio" name="options" id="option1" autocomplete="off">Criar Contato
-                </label>
-                <label class="btn">
-                    <input type="radio" name="options" id="option2" autocomplete="off">Adicionar Imovel
+                    <button (click)="onSubmit()" type="submit" name="options" id="option1"
+                        autocomplete="off">Salvar</button>
                 </label>
                 <label class="btn btn-r">
-                    <input type="radio" name="options" id="option3" autocomplete="off">Salvar
+                    <button (click)="onReset()" type="radio" name="options" id="option3"
+                        autocomplete="off">Resetar</button>
                 </label>
             </div>
+
         </form>
     </div>
 </div>
